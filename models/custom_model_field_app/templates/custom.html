@@ -1,0 +1,17 @@
+{% load crispy_forms_tags %}
+{% include 'base.html' %}
+<head>
+<title>CustomField</title>
+</head>
+<body>
+    <div class="container">
+        <form action="{% url 'customfield' %}" method="POST" class="form-floating">
+            {% csrf_token %}
+            {{form | crispy }}
+            <br><br>
+        <input type="submit" value="Submit">
+        </form>
+    </div>
+   
+</body>
+</html>
